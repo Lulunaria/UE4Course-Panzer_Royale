@@ -14,11 +14,11 @@ void ATankPlayerController::BeginPlay()
 	UE_LOG(LogTemp, Warning, TEXT("Begin Play Player Controller"));
 	if (ControlledTank)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Controlled by %s"), *(ControlledTank->GetName()));
+		UE_LOG(LogTemp, Warning, TEXT("%s is Controlled by player"), *(ControlledTank->GetName()));
 	}
 	if (!ControlledTank)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Controlled by computer"));
+
 	}
 }
 

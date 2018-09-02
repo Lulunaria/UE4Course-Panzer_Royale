@@ -4,22 +4,22 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "AIController.h"
 #include "Tank.h"
-#include "TankPlayerController.generated.h"
+#include "TankAIController.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PANZERROYALE_API ATankPlayerController : public APlayerController
+class PANZERROYALE_API ATankAIController : public AAIController
 {
 	GENERATED_BODY()
 	
 public:
 
-	ATank* GetControlledTank() const;
-
-	virtual void BeginPlay() override;
+	ATank* GetAIControlledTank() const;
 	
+	virtual void BeginPlay() override;
 	
 };
