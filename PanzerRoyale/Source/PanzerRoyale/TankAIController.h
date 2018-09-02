@@ -16,10 +16,12 @@ class PANZERROYALE_API ATankAIController : public AAIController
 {
 	GENERATED_BODY()
 	
-public:
+private:
+
+	virtual void BeginPlay() override;
 
 	ATank* GetAIControlledTank() const;
+	ATank* GetPlayerControlledTank() const;
 	
-	virtual void BeginPlay() override;
 	
 };
