@@ -20,6 +20,7 @@ private:
 
 	virtual void BeginPlay() override;
 
+
 	ATank* GetAIControlledTank() const;
 	ATank* GetPlayerControlledTank() const;
 	

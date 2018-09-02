@@ -15,11 +15,14 @@ class PANZERROYALE_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	
-public:
-
-	ATank* GetControlledTank() const;
+private:
 
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
 	
+	ATank* GetControlledTank() const;
+
+	//Turn the barrel so that the bullet aim at where the crossbar point to 
+	void AimAtCrossbar();
 	
 };

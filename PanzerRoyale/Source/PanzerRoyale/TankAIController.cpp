@@ -22,6 +22,9 @@ void ATankAIController::BeginPlay()
 }
 
 
+
+
+
 ATank* ATankAIController::GetAIControlledTank()const
 {
 	return Cast<ATank>(GetPawn());
@@ -36,3 +39,4 @@ ATank* ATankAIController::GetPlayerControlledTank()const
 	
 	return Cast<ATank>(PlayerTank);
 }
+

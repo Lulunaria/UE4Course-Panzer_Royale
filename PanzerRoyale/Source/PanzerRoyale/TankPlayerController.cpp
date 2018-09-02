@@ -16,14 +16,22 @@ void ATankPlayerController::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("%s is Controlled by player"), *(ControlledTank->GetName()));
 	}
-	if (!ControlledTank)
-	{
 
-	}
+}
+
+void ATankPlayerController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+
 }
 
 ATank* ATankPlayerController::GetControlledTank() const
 {
-	
 	return Cast<ATank>(GetPawn());
+}
+
+void ATankPlayerController::AimAtCrossbar()
+{
+	if (!GetControlledTank()) { return; }
 }
